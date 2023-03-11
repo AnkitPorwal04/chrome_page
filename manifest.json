@@ -1,0 +1,9 @@
+{
+  "name":"newtab",
+  "version": "1.0",
+  "manifest_version": 3,
+  "description": "Extension for new tab redirect",
+  "chrome_url_overrides" : {
+      "newtab": "index.html"
+    }    
+}
