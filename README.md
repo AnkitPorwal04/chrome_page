@@ -24,9 +24,11 @@ Make sure that the extension is ON.
 ### <b>Step 4</b>
 Open a new tab. A pop will come, then click on <b>Keep it</b>
 
+<img width="335" alt="Screenshot 2023-03-12 114755" src="https://user-images.githubusercontent.com/96345105/224528035-27384af6-491c-4040-8f2b-2bef2ced60b7.png">
+
 And this will be your final output.
 
-![Screenshot (19)](https://user-images.githubusercontent.com/96345105/224481533-f371df3e-fce6-40d7-b5a3-854d38d6b2e6.png)
+https://user-images.githubusercontent.com/96345105/224528217-f59805de-6774-4b8f-83d3-3ea9feafad66.mp4
 
 ### And BOOM you have your own customize chrome homepage.
 😎👍
