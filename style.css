@@ -1,0 +1,615 @@
+@import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');
+
+:root {
+  --body-color: 4 33 4;
+  --font-color: 255 255 255;
+  --theme-background: 20 20 20;
+
+}
+
+::selection {
+  background: rgb(136, 136, 136);
+}
+
+.prevent-select {
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+body {
+  background-color: rgb(var(--body-color));
+  margin: 0px;
+  padding: 0px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, input, select, button, span, a, p {
+  color: rgb(var(--font-color));
+  font-family: "Noto Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 0px;
+}
+
+button, a, input {
+  outline: none;
+}
+
+/* scroll bar */
+body::-webkit-scrollbar {
+  width: 4px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: rgb(var(--theme-background));
+}
+
+body::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+}
+.fancy-scrollbar::-webkit-scrollbar {
+  height: 4px;
+  width: 4px;
+}
+
+.fancy-scrollbar::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.fancy-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  height: 0px;
+  width: 0px;
+}
+#main-wrapper {
+  height: 100%;
+  overflow: auto;
+}
+
+*, *:before, *::after {
+  box-sizing: border-box;
+}
+
+main {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+main::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 115%;
+  left: 0;
+  width: var(--atom-size);
+  height: var(--nucleus-size);
+  background-image: radial-gradient(closest-side, rgba(0, 0, 0, .5), rgba(0, 0, 0, 0));
+  border-radius: 100%;
+  transform: scale(1, .8);
+  animation: 8s shadow infinite cubic-bezier(1, .25, 0, .75);
+}
+
+@keyframes shadow {
+  0% {
+    transform: scale(1, .8) translateY(0);
+  }
+
+  12.5% {
+    transform: scale(.7, .7) translateY(-20px);
+  }
+
+  25% {
+    transform: scale(1, .8) translateY(0);
+  }
+
+  37.5% {
+    transform: scale(.7, .7) translateY(-20px);
+  }
+
+  50% {
+    transform: scale(1, .8) translateY(0);
+  }
+
+  62.5% {
+    transform: scale(.7, .7) translateY(-20px);
+  }
+
+  75% {
+    transform: scale(1, .8) translateY(0);
+  }
+
+  87.5% {
+    transform: scale(.7, .7) translateY(-20px);
+  }
+
+  100% {
+    transform: scale(1, .8) translateY(0);
+  }
+}
+
+section
+{
+    margin-top: 75px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: animateColor 8s linear infinite;
+}
+
+@keyframes animateColor
+{
+    0%
+    {
+        filter: hue-rotate(0deg);
+    }
+    100%
+    {
+        filter: hue-rotate(360deg);
+    }
+}
+
+section .container
+{
+    display: flex;
+}
+section .container .circle
+{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: 0 -7.5px;
+}
+section .container .circle span
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: rotate(calc(18deg * var(--i)));
+    /* 360 / 20 = 18deg */
+}
+section .container .circle span::before
+{
+    content: '';
+    position: absolute;
+    right: 0;
+    top: calc(50% - 7.5px);
+    width: 15px;
+    height: 15px;
+    background: #9D00FF;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #9D00FF,
+                0 0 20px #9D00FF,
+                0 0 40px #9D00FF,
+                0 0 60px #9D00FF,
+                0 0 80px #9D00FF,
+                0 0 100px #9D00FF;
+    transform: scale(0.1);
+    animation: animate 4s linear infinite;
+    animation-delay: calc(0.1s * var(--i));
+}
+@keyframes animate {
+    0%
+    {
+        transform: scale(1);
+    }
+    50%,100%
+    {
+        transform: scale(0.1);
+    }
+}
+section .container .circle:nth-child(2)
+{
+    transform: rotate(-180deg);
+}
+section .container .circle:nth-child(2) span::before
+{
+    animation-delay: calc(-0.1s * var(--i));
+}
+
+/* Name txt */
+@keyframes blinkH1 {
+  0%   {
+      color: #fff;
+    text-shadow: 0px 0px 20px #9D00FF;
+    }
+  19%   {
+      color: #fff;
+    text-shadow: 0px 0px 20px #9D00FF;
+  }
+  20% {
+      color: #9E9E9E;
+    text-shadow: none;  
+  }
+  21% {
+      color: #fff;
+    text-shadow: 0px 0px 20px #9D00FF;  
+  }
+  60% {
+      color: #fff;
+    text-shadow: 0px 0px 20px #9D00FF;  
+  }
+  61% {
+      color: #9E9E9E;
+    text-shadow: none;  
+  }
+  62% {
+      color: #fff;
+    text-shadow: 0px 0px 20px #9D00FF;  
+  }
+  63% {
+      color: #9E9E9E;
+    text-shadow: none;  
+  }
+  64% {
+      color: #fff;
+    text-shadow: 0px 0px 20px #9D00FF;  
+  }
+  100% {
+      color: #fff;
+    text-shadow: 0px 0px 20px #9D00FF;  
+  }
+}
+
+@keyframes blinkH1After {
+  0%   {
+      color: #9D00FF;
+  }
+  19%   {
+      color: #9D00FF;
+  }
+  20% {
+      color: transparent; 
+  }
+  21% {
+      color: #9D00FF;  
+  }
+  60% {
+      color: #9D00FF;  
+  }
+  61% {
+      color: transparent; 
+  }
+  62% {
+      color: #9D00FF;  
+  }
+  63% {
+      color: transparent; 
+  }
+  64% {
+      color: #9D00FF;  
+  }
+  100% {
+      color: #9D00FF;  
+  }
+}
+
+@keyframes blinkH1Before {
+  0%   {
+      background: #9D00FF;
+  }
+  19%   {
+      background: #9D00FF;
+  }
+  20% {
+      background: transparent; 
+  }
+  21% {
+      background: #9D00FF;  
+  }
+  60% {
+      background: #9D00FF;  
+  }
+  61% {
+      background: transparent; 
+  }
+  62% {
+      background: #9D00FF;  
+  }
+  63% {
+      background: transparent; 
+  }
+  64% {
+      background: #9D00FF;  
+  }
+  100% {
+      background: #9D00FF;  
+  }
+}
+h3 {
+  font-family: 'Marck Script', cursive;
+  font-weight: 200;
+  margin: 0px;
+  position: relative;
+  color: #fff;
+  font-size: 50px;
+  text-shadow: 0px 0px 20px #9D00FF;
+  -webkit-animation: blinkH1 4s infinite;
+  animation: blinkH1 4s infinite;
+}
+
+h3:after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #9D00FF;
+  z-index: -1;
+  filter: blur(15px);
+  -webkit-animation: blinkH1After 4s infinite;
+  animation: blinkH1After 4s infinite;
+}
+
+h3:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #9D00FF;
+  z-index: -2;
+  opacity: 0.7;
+  filter: blur(50px);
+  -webkit-animation: blinkH1Before 4s infinite;
+  animation: blinkH1Before 4s infinite;
+}
+
+
+.name-txt {
+  clear: both;
+  display: flex;
+  justify-content: center;
+  margin-top: 35px;
+  padding: 0;
+  animation: animateColor 8s linear infinite;
+}
+
+/* Search Container */
+
+#search-container {
+  display: flex;
+  justify-content: center;
+  gap: 0.2rem;
+  margin-top: 1.8rem;
+  margin-bottom: 1.2rem;
+}
+
+#search-input-container>input,
+#search-container>button {
+  background-color: rgb(255 255 255 / 10%);
+  color: rgb(255 255 255 / 80%);
+  font-size: 1rem;
+  border: none;
+}
+
+#search-input-container:has(input:focus),
+#search-container>button:focus {
+  background-color: rgb(255 255 255 / 16%);
+}
+
+#search-container>button {
+  width: 3.5rem;
+  border-radius: 0.2rem;
+  cursor: pointer;
+}
+
+#search-container>#image-button {
+  border-bottom-right-radius: 0.5rem;
+}
+
+#search-input-container {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background-color: rgb(255 255 255 / 10%);
+  padding-left: 1rem;
+  border-radius: 0.2rem;
+  border-bottom-left-radius: 0.5rem;
+}
+
+
+#search-input-container>img {
+  height: 1.5rem;
+}
+
+#search-input-container>input {
+  width: 400px;
+  height: 3.25rem;
+  background-color: transparent;
+}
+
+/* social button */
+
+.social-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+
+}
+
+.social-button {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  width: 45px;
+  height: 45px;
+  text-decoration: none;
+  border-radius: 100%;
+  background: #fff;
+  text-align: center;
+}
+
+.social-button::after {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: 50%;
+  display: block;
+  width: 0;
+  height: 0;
+  border-radius: 100%;
+  transition: 0.3s;
+}
+
+.social-button:focus,
+.social-button:hover {
+  color: #fff;
+}
+
+.social-button:focus::after,
+.social-button:hover::after {
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  margin-left: calc(-50% - 1px);
+}
+
+.social-button svg {
+  position: relative;
+  z-index: 1;
+  transition: 0.3s;
+}
+
+.social-button svg {
+  height: 28px;
+  width: 28px;
+}
+
+.social-button--gmail {
+  color: #3f729b;
+  background-color: white;
+  border: none;
+  padding: 0;
+  margin: 0 5px;
+  font-size: 24px;
+}
+
+.social-button--youtube {
+  color: #ff0000;
+  background-color: white;
+  border: none;
+  padding: 0;
+  margin: 0 5px;
+  font-size: 24px;
+}
+
+.social-button--github {
+  color: #3b5999;
+}
+
+.social-button--github::after {
+  background: #3b5999;
+}
+
+.social-button--linkedin {
+  color: #0077b5;
+}
+
+.social-button--linkedin::after {
+  background: #0077b5;
+}
+
+.social-button--whatsapp {
+  color: #43cd66;
+}
+
+.social-button--whatsapp::after {
+  background: #43cd66;
+}
+
+.social-button--chatgpt {
+  color: #10a37f;
+}
+
+.social-button--chatgpt::after {
+  background: #10a37f;
+}
+
+.social-button--gmail {
+  color: #D44638;
+}
+
+.social-button--gmail::after {
+  background: #D44638;
+}
+
+.social-button--youtube {
+  color: #ff0000;
+}
+
+.social-button--youtube::after {
+  background: #ff0000;
+}
+
+
+@media screen and (max-width: 540px) {
+  #search-input-container>input {
+    width: 300px;
+    height: 3.15rem;    
+  }
+  
+}
+
+@media screen and (max-width: 450px) {
+
+  h3 {
+  font-size: 40px;
+}
+  #search-input-container>input {
+    width: 250px;
+    height: 3.15rem;
+    
+  }
+  
+}
+@media screen and (max-width: 400px) {
+  h3 {
+  font-size: 35px;
+}
+  #search-input-container>input {
+    width: 200px;
+    height: 3.15rem;
+    
+  }
+  #main-wrapper {
+    width: 100%;
+    flex-grow: 1;
+  }
+  .social-button {
+    width: 34px;
+    height: 34px;
+    gap: 10px;
+  }
+  .social-button i {
+    font-size: 20px;
+  }
+  
+  .social-button svg {
+    height: 20px;
+    width: 20px;
+  }
+  
+}
+@media screen and (max-width: 320px) {  
+  
+  #search-input-container>input {
+    width: 170px;
+    height: 3.05rem;
+    
+  }
+  
+}
