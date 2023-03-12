@@ -14,7 +14,7 @@ Extract the files in the folder you want.
 ### <b>Step 3:</b>
 <li>Open Chrome and type this in search box : chrome://extensions/ and hit enter.</li> 
 <li>Chrome extension page will open. Then turn on the <b>Developer Mode</b>.</li>
-<li>Then click on the <b>load unpacked</b>, and upload the extracted file.</li>
+<li>Then click on the <b>load unpacked</b>, and upload the extracted file (Don't Forget to change your name in the source code..).</li>
 <li>This will be shown in the page::</li>
 
 <img width="960" alt="img2" src="https://user-images.githubusercontent.com/96345105/224481131-c4dbe2fc-8b85-47bb-90e4-8aa2f896f9cd.png">
