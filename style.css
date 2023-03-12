@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');
 
 :root {
-  --body-color: 4 33 4;
+  --body-color: 20, 20, 20;
   --font-color: 255 255 255;
   --theme-background: 20 20 20;
 
@@ -436,6 +436,10 @@ h3:before {
   flex-wrap: wrap;
   justify-content: center;
   gap: 12px;
+  animation: animateColor2 8s linear infinite;
+}
+
+@keyframes animateColor2{
 
 }
 
